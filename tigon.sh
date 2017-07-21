@@ -21,7 +21,6 @@ install() {
 		cd ..
 		chmod +x bot
 		chmod +x tg
-		cd $HOME/tigonbot
 
 }
 
