@@ -1,16 +1,4 @@
 
-
---[[
-
-     **************************
-     *  Powered By @BeyondTeam  *
-     *                        *
-     *      By @Tele_Sudo        *
-     *                        *
-     *  Channel > @BeyondTeam   *
-     **************************
-	 
-]]
 local day = 86400
 local function modrem(msg)
   local data =         load_data(_config.moderation.data)
@@ -139,14 +127,3 @@ patterns = {
 run = run,
 pre_process = pre_process
 }
---[[
-
-     **************************
-     *  Powered By @BeyondTeam  *
-     *                        *
-     *      By @Tele_Sudo        *
-     *                        *
-     *  Channel > @BeyondTeam   *
-     **************************
-	 
-]]
