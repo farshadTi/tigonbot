@@ -191,7 +191,7 @@ end
   end
 --------------------------------
 if matches[1]:lower() == 'test' then
-return tdcli.sendDocument(msg.chat_id_, 0, 0, 1, nil, './Fun/ping.gif', '@TIGONBOTTEM', dl_cb, nil)
+return tdcli.sendDocument(msg.chat_id_, 0, 0, 1, nil, './Fun/ping.gif', '😍تیگون هم اڪنون انلاین میباشد😍', dl_cb, nil)
 end
 --------------------------------
 if matches[1] == 'bold' or matches[1] == 'Bold' or matches[1] == 'بولد' then
@@ -372,4 +372,3 @@ return {
 	run = run,
 	}
 
---#by @MaTaDoRTeaM :)
