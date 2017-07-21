@@ -1,4 +1,4 @@
---Begin BanHammer.lua By @MahDiRoO
+--Begin BanHammer.lua By @DevLoperTG
 local function pre_process(msg)
    if msg.to.type ~= 'pv' then
 chat = msg.to.id
@@ -235,7 +235,7 @@ if is_gbanned(data.id_) then
      if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *globally banned*", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از تمام گروه های ربات محروم شد*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, ""..user_name.."\n*"..data.id_.."*\n_این چس ممبر یتیم بہ علت خارڪصہ بازے بہ لیست لیسندگان اضافہ شد(ڪص ننت یتیم)\n\n➖➖➖➖➖➖_", 0, "md")
    end
 end
 tdcli_function ({
