@@ -38,7 +38,7 @@ local function disable_channel( receiver )
 end
 
 local function pre_process(msg)
- local receiver = msg.chat_id_
+ local receiver = msg.to.id
  
  if is_owner(msg) then
    if msg.content_.text_ == "/bot on" or msg.content_.text_ == "/Bot on" or msg.content_.text_ == "!bot on" or msg.content_.text_ == "!Bot on" then
@@ -52,9 +52,9 @@ local function pre_process(msg)
 end
 
 local function run(msg, matches)
- local receiver = msg.chat_id_
+ local receiver = msg.to.id
  
- local hash = 'usecommands:'..msg.sender_user_id_..':'..msg.chat_id_
+ local hash = 'usecommands:'..msg.sender_user_id_..':'..msg.to.id
     redis:incr(hash)
  if not is_owner(msg) then
  return '*You Not Owner*'
