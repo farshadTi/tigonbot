@@ -15,7 +15,7 @@ local hash = ('bot:pm')
     if not pm then 
     return ' ثبت نشده' 
     else 
-	   return tdcli.sendMessage(msg.chat_id_ , 0, 1, 'پیغام کنونی منشی:\n\n'..pm, 0, 'html')
+	   return tdcli.sendMessage(msg.to.id , 0, 1, 'پیغام کنونی منشی:\n\n'..pm, 0, 'html')
     end
 end
 
@@ -32,13 +32,13 @@ redis:del("bot:pm")
 return "منشی غیرفعال شد" 
 end
  end
-  if gp_type(msg.chat_id_) == "pv" and  msg.content_.text_ then
+  if gp_type(msg.to.id) == "pv" and  msg.content_.text_ then
     local hash = ('bot:pm') 
     local pm = redis:get(hash)
-if gp_type(msg.chat_id_) == "channel" or gp_type(msg.chat_id_) == "chat" then
+if gp_type(msg.to.id) == "channel" or gp_type(msg.to.id) == "chat" then
 return
 else
- return  tdcli.sendMessage(msg.chat_id_ , 0, 1, pm, 0, 'html')
+ return  tdcli.sendMessage(msg.to.id , 0, 1, pm, 0, 'html')
     end 
     end
 end
